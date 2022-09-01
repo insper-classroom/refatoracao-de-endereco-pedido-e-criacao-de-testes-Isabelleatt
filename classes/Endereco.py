@@ -38,13 +38,19 @@ class Endereco:
             self.complemento = complemento
             self.cep = str(cep)
 
-
-    def consultar_cep(self, cep):
+    @classmethod
+    def consultar_cep(cls,cep):
         '''
         Metodo realiza a consulta do cep em uma api publica para obter informações
         como estado, cidade e rua
         '''
         # continuam existindo variaveis locais, nem tudo é propriedade de objeto
+        cep_str = str(cep)
+        if len(cep_str) < 8:
+            formata = 8 - len(cep_str)
+            cep_str = '0' * formata + cep_str 
+        elif len(cep_str) > 8:
+            return False
 
         # end point da API de consulta ao cep
         url_api = f'https://viacep.com.br/ws/{str(cep)}/json/'
@@ -59,6 +65,10 @@ class Endereco:
 
         # converte a resposta json em dict
         json_resp = response.json()
+
+        # Verifica se o CPF é inválido e retorna "False"
+        if 'erro' in json_resp:
+            return False 
         return json_resp
 
 
