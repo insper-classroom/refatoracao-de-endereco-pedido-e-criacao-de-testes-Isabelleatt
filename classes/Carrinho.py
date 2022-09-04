@@ -7,8 +7,8 @@
 # ---------------------------------------------------------------------------
 
 from classes.Endereco import Endereco
-from classes.Produto import Produto
 from classes.PessoaFisica import PessoaFisica
+from classes.Produto import Produto
 
 # Esta classe deverá permitir a inserção de items, bem como a atualização da quantidade de
 # produtos em um item

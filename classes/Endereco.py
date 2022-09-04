@@ -71,6 +71,10 @@ class Endereco:
             return False 
         return json_resp
 
+            # Formata o endereço
+    def __str__ (self):
+        return (f'''{self.rua}, {self.numero} - {self.cidade}, {self.cep}''')
+
 
 
 

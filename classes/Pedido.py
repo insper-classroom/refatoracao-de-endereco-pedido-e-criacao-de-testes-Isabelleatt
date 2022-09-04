@@ -26,7 +26,7 @@ class Pedido:
 Nome: {self.pessoa.nome}
 Produtos: {self.carrinho.get_itens()}
 Endereço de entrega: {self.endereco_entrega}
-Endereço de recebimento da fatura {self.endereco_faturamento}
+Endereço de recebimento da fatura: {self.endereco_faturamento}
 ''')
 
 

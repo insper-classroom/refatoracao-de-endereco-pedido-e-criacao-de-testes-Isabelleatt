@@ -19,7 +19,8 @@ class Produto:
     def self_id(self, id_novo):
         # O objeto que está chamando os métodos e os valores que estão sendo refereciados são prórpios deles
         self.id = id_novo # O próprio sabonete
-
+        return self.id
+    
     def get_id(self):
         return self.id
     

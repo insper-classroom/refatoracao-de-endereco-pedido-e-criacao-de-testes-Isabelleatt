@@ -49,7 +49,6 @@ pedido = Pedido(pessoa1, carrinho)
 pedido.endereco_entrega = copy.deepcopy(end1) 
 pedido.endereco_faturamento = copy.deepcopy(end2)
 
-
 pag = Pagamento(pedido)
 pag.processa_pagamento()
 if pag.pagamento_aprovado:

@@ -29,6 +29,7 @@ class PessoaFisica:
 
     def adicionar_endereco(self, apelido_endereco, end:Endereco): # O argumento "end" deve ser um objeto da classe endereço
         self.__enderecos[apelido_endereco] = end 
+        return self.__enderecos[apelido_endereco]
         
     def remover_endereco(self, apelido_endereco):
         del self.__enderecos[apelido_endereco]
