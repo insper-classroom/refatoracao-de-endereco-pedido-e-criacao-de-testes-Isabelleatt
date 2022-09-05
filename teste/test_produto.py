@@ -30,14 +30,4 @@ def test_get_id():
     produto = Produto(id_produto, nome)
     assert Produto.get_id(produto) == id_produto
 
-# Carrinho | Testa se um item está sendo adicionar corretamente
-@pytest.mark.carrinho
-def test_adicionar_item():
-    produto = Produto("0010342967", "Sabonete")
-    carrinho = Carrinho()
-    carrinho.adicionar_item(produto, 4)
-    atributo = carrinho.get_itens()
-    assert atributo == {"0010342967": 4}
-
-
 

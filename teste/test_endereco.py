@@ -74,4 +74,4 @@ def test_conexao_de_internet():
     cep = '04546042'
     with pytest.raises(requests.exceptions.ConnectionError) as excinfo:
         endereco = Endereco.consultar_cep(cep) 
-    assert "maximum recursion Max retries exceeded with url" in str(excinfo.value)
+    assert "Max retries exceeded with url" in str(excinfo.value)
